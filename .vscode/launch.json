@@ -1,0 +1,49 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Debug (Launch) - Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Percolation<Algopart1_84b82e37>",
+            "request": "launch",
+            "mainClass": "week1.assignment1.Percolation",
+            "projectName": "Algopart1_84b82e37"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-PercolationStats<Algopart1_84b82e37>",
+            "request": "launch",
+            "mainClass": "week1.assignment1.PercolationStats",
+            "projectName": "Algopart1_84b82e37"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Test<Algopart1_84b82e37>",
+            "request": "launch",
+            "mainClass": "week1.dynamicconnectivity.Test",
+            "projectName": "Algopart1_84b82e37"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-BitoncSearch<Algopart1_84b82e37>",
+            "request": "launch",
+            "mainClass": "week1.interview.BitoncSearch",
+            "projectName": "Algopart1_84b82e37"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-SocialNetwork<Algopart1_84b82e37>",
+            "request": "launch",
+            "mainClass": "week1.interview.SocialNetwork",
+            "projectName": "Algopart1_84b82e37"
+        }
+    ]
+}

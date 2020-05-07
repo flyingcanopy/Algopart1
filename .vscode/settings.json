@@ -1,0 +1,7 @@
+{
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "c:\\Users\\bhuva\\Downloads\\algs4.jar"
+    ],
+    "java.format.settings.url": "eclipse-formatter.xml"
+}
