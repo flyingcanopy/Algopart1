@@ -3,7 +3,6 @@
  */
 package week1.dynamicconnectivity;
 
-
 /*                      Fundementals of QuickUnion
  * 
  *   Quick Union we represent connected Components as Set of Forests
@@ -55,55 +54,48 @@ package week1.dynamicconnectivity;
 public class QuickUnion implements UnionFind {
 	private int id[];
 	private int N;
-	
-	QuickUnion(int N)
-	{
-		id=new int[N];
-		this.N=N;
-		for(int i=0;i<N;i++)
-		{
-			id[i]=i;
+
+	QuickUnion(int N) {
+		id = new int[N];
+		this.N = N;
+		for (int i = 0; i < N; i++) {
+			id[i] = i;
 		}
 	}
-	
+
 	/*
 	 * 
-	 * root returns the root of that connected component representin it
-	 * root of a tree doesnt have any parent its entry is itself hence we stop when id[p]==p
+	 * root returns the root of that connected component representin it root of a
+	 * tree doesnt have any parent its entry is itself hence we stop when id[p]==p
 	 * 
 	 */
-	private int root(int p)
-	{
-	if(id[p]==p)
-		return p;
-	return root(id[p]);
+	private int root(int p) {
+		if (id[p] == p)
+			return p;
+		return root(id[p]);
 	}
-	
+
 	/*
-	 * connected operation checks if two objects have the same root 
+	 * connected operation checks if two objects have the same root
 	 */
-	public boolean connected(int p,int q)
-	{
-		return root(p)==root(q);
+	public boolean connected(int p, int q) {
+		return root(p) == root(q);
 	}
-	
+
 	/*
-	 * union operation merges two connected componenets by making the root of the first object point to root of the second object 
+	 * union operation merges two connected componenets by making the root of the
+	 * first object point to root of the second object
 	 * 
 	 * 
 	 */
-	public void union(int p,int q)
-	{
-		if(!connected(p,q))
-		{
-			
-			int rootp=root(p);
-			int rootq=root(q);
-			id[rootp]=rootq;
+	public void union(int p, int q) {
+		if (!connected(p, q)) {
+
+			int rootp = root(p);
+			int rootq = root(q);
+			id[rootp] = rootq;
 		}
-		
-		
+
 	}
-	
 
 }

@@ -37,33 +37,28 @@ Everyone are connected
  * Created by zouken on 14-08-2017.
  */
 public class SocialNetwork {
-    public static void main(String[] args)
-    {
-        Scanner scan=new Scanner(System.in);
-        Stack<Date> st=new Stack<Date>();
-         int N;
-        N=scan.nextInt();
-        WeightedQuickUnionPathCompression wqu=new WeightedQuickUnionPathCompression(N);
-        while(N>1)
-        {
-            int p=scan.nextInt();
-            int q=scan.nextInt();
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        Stack<Date> st = new Stack<Date>();
+        int N;
+        N = scan.nextInt();
+        WeightedQuickUnionPathCompression wqu = new WeightedQuickUnionPathCompression(N);
+        while (N > 1) {
+            int p = scan.nextInt();
+            int q = scan.nextInt();
             scan.nextLine();
-            String s=scan.nextLine();
-            String dd[]=s.split("/");
-            Date dt=new Date(Integer.parseInt(dd[0]),Integer.parseInt(dd[1]),Integer.parseInt(dd[2]));
+            String s = scan.nextLine();
+            String dd[] = s.split("/");
+            Date dt = new Date(Integer.parseInt(dd[0]), Integer.parseInt(dd[1]), Integer.parseInt(dd[2]));
             st.push(dt);
 
-            if(!wqu.connected(p,q))
-            {
+            if (!wqu.connected(p, q)) {
                 N--;
-                wqu.union(p,q);
+                wqu.union(p, q);
 
             }
-            if(N>=2)
+            if (N >= 2)
                 st.pop();
-
-
         }
         System.out.println(st.pop().getMonth());
 

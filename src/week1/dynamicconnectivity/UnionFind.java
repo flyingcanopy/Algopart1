@@ -39,8 +39,6 @@ package week1.dynamicconnectivity;
  * 
  */
 
-
- 
 /**
  * @author bhuvan
  *
@@ -52,26 +50,18 @@ public interface UnionFind {
 	 * 
 	 * 
 	 */
-    void union(int p, int q);
-	
-	
-	
-	
+	void union(int p, int q);
+
 	/*
 	 * connected is going to check if two objects p and q are connected
 	 * 
 	 */
-    boolean connected(int p, int q);
+	boolean connected(int p, int q);
 
 	/*
-	returns the largest number in that connected component
-
+	 * returns the largest number in that connected component
+	 * 
 	 */
-	//public int find(int p);
-	
-	
-	
-	
-	
+	// public int find(int p);
 
 }
